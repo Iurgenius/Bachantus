@@ -60,6 +60,49 @@
             border-radius: 3px;
             margin-bottom: 5px;
         }
+
+        /* Styling voor de nieuwe visuele afbeeldingsknoppen */
+        .codex-button-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        .codex-card {
+            flex: 1;
+            min-width: 280px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .codex-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 15px rgba(128, 0, 32, 0.15);
+            border-color: #800020;
+        }
+        .codex-card-img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background-color: #fff;
+            padding-top: 15px;
+        }
+        .codex-card-body {
+            padding: 15px;
+            text-align: center;
+            background: #fafafa;
+            border-top: 1px solid #eee;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #800020;
+        }
     </style>
 </head>
 <body>
@@ -108,12 +151,25 @@
 
         <div class="info-card">
             <span class="badge">Wijziging</span> <strong>Verdwijnen en verschijnen van liederen</strong><br>
-            Sommige liederen die doorheen de decennia in onbruik waren geraakt, zijn uit de officiële lijst geschrapt om plaats te maken voor modernere Vlaamse klassiekers of liederen die populairder zijn geworden aan de studententoog. Ook liederen met een zwaar omstreden historische context worden in modernere edities soms kritisch bekeken of herzien.
+            Sommige liederen die doorheen de decennia in onbruik waren geraakt, zijn uit de officiële lijst geschrapt om plaats te maken voor modernere Vlaamse klassiekers of liederen die populairder zijn geworden aan de studententoog.
         </div>
 
-        <div class="info-card">
-            <span class="badge">Wijziging</span> <strong>De Digitale Switch</strong><br>
-            De meest recente 'wijziging' in de traditie is niet fysiek, maar digitaal. Omdat studenten hun fysieke codex steeds vaker vergeten of sparen van bierplekken, zie je een enorme opkomst van digitale initiatieven (zoals Bachantus!) om de liederen en de structuur mobiel raadpleegbaar te maken.
+        <!-- DE NIEUWE VISUELE AFBEELDINGSKNOPPEN -->
+        <h2>📚 Specifieke Regionale Edities</h2>
+        <p>Kies een editie hieronder om de specifieke liederen, geschiedenis en unieke eigenschappen per studentenstad te ontdekken:</p>
+        
+        <div class="codex-button-container">
+            <!-- Knop Leuvense Codex -->
+            <a href="Codex-Leuven (Groen).html" class="codex-card">
+                <img src="https://www.academia-studentica.eu/wp-content/uploads/AS/Collection/Songbooks/KVHV-Leuven-Studentencodex-Belgium-Leuven-2014.-scaled.jpg" alt="Leuvense Studentencodex Groen" class="codex-card-img">
+                <div class="codex-card-body">Leuvense Codex 🟢</div>
+            </a>
+
+            <!-- Knop Gentse Codex -->
+            <a href="Codex-Gent (Blauw).html" class="codex-card">
+                <img src="https://www.academia-studentica.eu/wp-content/uploads/AS/Collection/Songbooks/KVHV-Gent-Studentencodex-Belgium-Gent-2007.-scaled.jpg" alt="Gentse Studentencodex Blauw" class="codex-card-img">
+                <div class="codex-card-body">Gentse Codex 🔵</div>
+            </a>
         </div>
     </div>
 
