@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Bachantus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #800020;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        h1 { margin: 0; }
+        .nav-back {
+            display: inline-block;
+            margin-top: 10px;
+            color: #ffcccb;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 650px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #800020;
+            border-bottom: 2px solid #800020;
+            padding-bottom: 5px;
+        }
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+        /* Formulier opmaak */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #800020;
+        }
+        input, textarea, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: #800020;
+            outline: none;
+        }
+        .submit-btn {
+            background-color: #800020;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background-color: #a00028;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Opnemen</h1>
+        <a href="index.html" class="nav-back">⬅ Terug naar Startpagina</a>
+    </header>
+
+    <div class="container">
+        <h2>Neem contact op met Bachantus</h2>
+        <p>Heb je een vraag over het platform, of wil je hulp bij het inplannen van een grote studentencantus? Vul het onderstaande formulier in en de moderator neemt zo snel mogelijk contact met je op.</p>
+
+        <!-- HET CONTACTFORMULIER -->
+        <!-- VERVANG 'HIER_JOUW_EMAIL@GMAIL.COM' DOOR JE ECHTE PRIVÉ EMAILADRES -->
+        <form action="https://formsubmit.co/bachantus@gmail.com" method="POST">
+            
+            <!-- Zorgt voor een nette terugkeer naar de contactpagina na verzending -->
+            <input type="hidden" name="_next" value="https://iurgenius.github.io/Bachantus/contact.html">
+            <input type="hidden" name="_subject" value="Nieuw Contactbericht via Bachantus!">
+
+            <label for="naam">Jouw Naam / Naam Praesidiumlid:</label>
+            <input type="text" id="naam" name="Naam" placeholder="Bijv. Joris Janssens" required>
+
+            <label for="club">Club of Vereniging (optioneel):</label>
+            <input type="text" id="club" name="Club_Vereniging" placeholder="Bijv. Moeder KULeuven">
+
+            <label for="email">E-mailadres:</label>
+            <input type="email" id="email" name="Email" placeholder="Bijv. joris@student.be" required>
+
+            <label for="telefoon">Telefoonnummer (optioneel):</label>
+            <input type="tel" id="telefoon" name="Telefoonnummer" placeholder="Bijv. 0499 12 34 56">
+
+            <label for="onderwerp">Waar gaat je bericht over?</label>
+            <select id="onderwerp" name="Onderwerp" required>
+                <option value="Algemene vraag">Algemene vraag / Opmerking</option>
+                <option value="Cantus inplannen">Hulp bij het inplannen van een cantus</option>
+                <option value="Foutje op de website">Foutje melden op de website</option>
+            </select>
+
+            <label for="bericht">Jouw Bericht:</label>
+            <textarea id="bericht" name="Bericht" rows="6" placeholder="Typ hier je vraag, details over de datum die je wil inplannen, of andere informatie..." required></textarea>
+
+            <button type="submit" class="submit-btn">Bericht Verzenden</button>
+        </form>
+    </div>
+
+</body>
+</html>
