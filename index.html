@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bachantus - De gids voor elke cantus!</title>
+    <title>Bachantus - Hét Open-Source Cantusplatform</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,48 +11,115 @@
             color: #333;
             margin: 0;
             padding: 0;
-            text-align: center;
+            line-height: 1.6;
         }
         header {
-            background-color: #800020; /* Mooi bordeauxrood/wijnrood */
+            background-color: #800020; /* Traditioneel wijnrood */
             color: white;
-            padding: 40px 20px;
+            padding: 60px 20px;
+            text-align: center;
         }
-        h1 { margin: 0; font-size: 2.5em; }
+        header h1 { margin: 0; font-size: 3em; font-weight: bold; letter-spacing: 1px; }
+        header p { margin: 10px 0 0 0; font-size: 1.2em; color: #ffcccb; font-style: italic; }
+        
         .container {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 30px;
             background: white;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
+        
+        h2 { color: #800020; border-bottom: 2px solid #800020; padding-bottom: 8px; margin-top: 0; }
+        h3 { color: #500014; margin-top: 25px; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+        
+        .accent-box {
+            background-color: #fdf8f5;
+            border-left: 4px solid #800020;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+            font-style: italic;
+        }
+
+        .button-zone {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+        
         .knop {
             display: inline-block;
             background-color: #800020;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 15px;
+            font-weight: bold;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .knop:hover { background-color: #a00028; }
+        .knop:hover {
+            background-color: #a00028;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            margin-top: 5px;
+            padding-top: 15px;
+            border-top: 1px dashed #ccc;
+            color: #555;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Bachantus</h1>
-        <p>Hét open-source platform voor studentencantussen</p>
+        <p>"Ut vivat, crescat, floreatque cantus!"</p>
     </header>
 
     <div class="container">
         <h2>Welkom op Bachantus!</h2>
-        <p>Dit is het begin van een volledig gratis en open-source platform over de mooiste studententraditie: de cantus.</p>
-        <p>Binnenkort vind je hier de volledige codex (nieuw voorlopig alleen de oude heb ik helaas niet in bezit), alle cantusregels (corona, senior, silentium) en de sfeer van het studentenleven.</p>
-        <a href="#" class="knop">Bekijk de Codex (Binnenkort)</a>
-        <a href="Rollen.html" class="knop">Bekijk Praesidium & Rollen</a>
-        <a href="Contact.html" class="knop">Neem Contact Op</a>
+        <p>Welkom, waarde commilitones, schachten en sympathisanten van het Vlaamse studentenleven! <strong>Bachantus</strong> is ontstaan uit pure, onversneden liefde voor de studententraditie, de sfeer aan de cantustafel, het maken van plezier en natuurlijk – hoe kan het ook anders – het gezamenlijk nuttigen van een ijskoud glas gerstenat. Het ultieme doel van dit platform? De rijke traditie van de cantus digitaal ondersteunen en toegankelijk maken voor iedereen.</p>
+        
+        <p>Of je nu een kersverse schacht bent die de rollen van het praesidium probeert te ontcijferen, of een doorgewinterde senior die een cantus wil inplannen: Bachantus staat voor je klaar. Ik hoop dat dit platform een baken van informatie mag zijn voor heel studerend Vlaanderen.</p>
+
+        <!-- SNELLE NAVIGATIE KNOPPEN -->
+        <div class="button-zone">
+            <a href="Rollen.html" class="knop">🛡️ Bekijk het Praesidium</a>
+            <a href="Contact.html" class="knop">📩 Neem Contact Op</a>
+        </div>
+
+        <h2>Toekomstplannen &amp; Blauwe Pagina's</h2>
+        <p>Achter de schermen wordt er hard gewerkt om Bachantus uit te bouwen tot de meest complete online database. Wat staat er de komende tijd op de planning?</p>
+        <ul>
+            <li><strong>De Digitale Codex:</strong> Het volledig uitschrijven en categoriseren van de studentenliederen.</li>
+            <li><strong>De Blauwe Pagina's:</strong> Een diepgaande blik op de traditionele regels, de zeden en de absolute 'wetten' van de corona.</li>
+            <li><strong>Codex Evolutie:</strong> Een heldere uitleg over de verschillen tussen de oude en de gloednieuwe codexen.</li>
+            <li><strong>PDF-Downloads:</strong> De mogelijkheid om liederen rechtstreeks als PDF te downloaden op je smartphone, zodat je ze tijdens de cantus altijd offline bij de hand hebt.</li>
+        </ul>
+
+        <h2>Oproep aan de Community (Bouw mee!)</h2>
+        <p>Bachantus is en blijft <strong>100% open-source</strong>. Dat betekent dat dit platform van én voor studenten is. Heb je suggesties, wil je ergens aan meewerken of heb je een foutje ontdekt? Trek de moderator aan zijn mouw via de contactpagina en we bespreken het onder het genot van een pint!</p>
+        
+        <div class="accent-box">
+            <strong>Gezocht: De Grote Vlaamse Club- &amp; Verenigingslijst!</strong><br>
+            Binnenkort wil ik een gigantische database en ranglijst online zetten van alle actieve studentenclubs en faculteitskringen in Vlaanderen. Maar daar heb ik jullie hulp bij nodig! Mis je jouw club of vereniging? Stuur een berichtje via het contactformulier, leg uit wie jullie zijn, wat jullie tradities zijn en ik zorg voor een eervolle vermelding op de site. Let's make it complete!
+        </div>
+
+        <p>Hartelijk dank voor jullie bezoek, geniet van het platform, en hopelijk tot snel aan de toog of aan de cantustafel!</p>
+
+        <footer>
+            <p>Met vriendelijke en studentikoze groeten,</p>
+            <p><strong>Magister Iurgenius</strong><br>
+            <em>Oprichter &amp; Moderator van Bachantus</em></p>
+        </footer>
     </div>
 
 </body>
