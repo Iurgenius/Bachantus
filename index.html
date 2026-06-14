@@ -63,10 +63,22 @@
             font-weight: bold;
             transition: background 0.2s, transform 0.2s;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
         }
         .knop:hover {
             background-color: #a00028;
             transform: translateY(-2px);
+        }
+        
+        /* Speciale opvallende kleur voor de Roulette knop */
+        .knop.roulette-btn {
+            background-color: #b71c1c;
+        }
+        .knop.roulette-btn:hover {
+            background-color: #d32f2f;
         }
         
         footer {
@@ -86,15 +98,19 @@
 
     <div class="container">
         <h2>Welkom op Bachantus!</h2>
-        <p>Welkom, waarde commilitones, schachten en sympathisanten van het Vlaamse studentenleven! <strong>Bachantus</strong> is ontstaan uit pure, onversneden liefde voor de studententraditie, de sfeer aan de cantustafel, het maken van plezier en natuurlijk – hoe kan het ook anders – het gezamenlijk nuttigen van een ijskoud glas gerstenat. Het ultieme doel van dit platform? De rijke traditie van de cantus digitaal ondersteunen en toegankelijk maken voor iedereen.</p>
+        <p>Welkom, waarde commilitones, schachten en sympathisanten van het Vlaamse studentenleven! <strong>Bachantus</strong> is ontstaan uit pure, onversneden liefde voor de studententraditie, de sfeer aan de cantustafel, het maken van plezier en natuurlijk – hoe kan het ook anders – het gezamenlijk nuttigen van een ijskoud glas gerstenat. Het ultieme doel van dit platform? De rijke traditie van de cantus digitaal ondersteunen ien toegankelijk maken voor iedereen.</p>
         
         <p>Of je nu een kersverse schacht bent die de rollen van het praesidium probeert te ontcijferen, of een doorgewinterde senior die een cantus wil inplannen: Bachantus staat voor je klaar. Ik hoop dat dit platform een baken van informatie mag zijn voor heel studerend Vlaanderen.</p>
 
         <!-- SNELLE NAVIGATIE KNOPPEN -->
         <div class="button-zone">
             <a href="Rollen.html" class="knop">🛡️ Bekijk het Praesidium</a>
-            <a href="Contact.html" class="knop">📩 Neem Contact Op</a>
             <a href="codex-info.html" class="knop">📘 Over de Codex</a>
+            
+            <!-- CANTUS ROULETTE KNOP (Hier tussengevoegd!) -->
+            <button onclick="draaiCantusRoulette()" class="knop roulette-btn">🎲 Cantus Roulette</button>
+            
+            <a href="Contact.html" class="knop">📩 Neem Contact Op</a>
         </div>
 
         <h2>Toekomstplannen &amp; Blauwe Pagina's</h2>
@@ -123,6 +139,56 @@
         </footer>
     </div>
 
+    <!-- FUNCTIONALITEIT VOOR DE CANTUS ROULETTE -->
+    <script>
+        function draaiCantusRoulette() {
+            // Lijst met cantusstraffen
+            const straffen = [
+                "AD MELKERT: Een ad fundum waarbij je bier en (karne)melk door elkaar moet drinken!",
+                "AD SCHOENDUM: Trek een schoen uit, giet er een glas bier in leeg en drink je schoen ad fundum leeg!",
+                "AD STROGUM DYNAMICA: Doe een Ad Strogum (ad fundum met een rietje) terwijl je je ondertussen opdrukt (pompt)!",
+                "CAMEMBERT: Trek een sok uit en trek die over je glas. Drink daarna je glas ad fundum leeg door de sok heen!",
+                "DALTON: Je krijgt 4 glazen (1/4, 1/2, 3/4 en vol). Noem de Dalton-broeders van groot naar klein (Averell, William, Jack, Joe). Per fout drink je een glas ad fundum!",
+                "DALTON TERROR: Drink een glas van de Dalton, zet het op de grond, leg je vinger erop en draai 10 maal rond. Doe dit daarna voor elk volgend glas!",
+                "GEELSE: Zet je lippen rond het glas en drink het volledig leeg zonder je handen te gebruiken!",
+                "KANGOEROE: Drink al springend je glas/pint ad fundum leeg!",
+                "KWAK: Waggel in eendenpas langs een rij van glazen op de grond. Je moet telkens een glas ad fundum leegdrinken voor je door mag waggelen!",
+                "LUIGI: Een viertal vrijwilligers hijst je aan je ondergoed van de grond omhoog. Terwijl je hangt, drink je je glas ad fundum leeg!",
+                "MUUR VAN GERAARDSBERGEN: Drink zeven pintjes in volgorde leeg (1/4, 1/2, 3/4, vol, 3/4, 1/2, 1/4) om de Muur op te klimmen en weer af te dalen!",
+                "SINGING IN THE RAIN: Ga in het midden staan en zing 'Singing in the rain', terwijl de corona rondom je staat en je bekogelt met bier!",
+                "SOIXANTE-NEUF (69): Ga samen met een mede-gestrafte in de 69-positie op de grond liggen en drink allebei je pint ad fundum leeg!",
+                "SPAANSE JEZUS: Houd een heel lied lang twee volle kannen/pinten met gestrekte armen boven je schouders, en drink ze daarna op de Spaanse manier (arm gestrekt boven je hoofd) ad fundum leeg!",
+                "SPASTISCHE: Draai je hand zodat je duim zich onderaan bevindt en je palm naar je lichaam wijst. Neem zo je glas vast en drink het ad fundum leeg!",
+                "SUPERMAN: Ga op je buik op een stoel liggen in plankhouding (1 arm en beide benen gestrekt). Drink ondertussen met je vrije hand je pint ad fundum. Blijf strak gespannen tot het glas leeg is!",
+                "TORENS VAN GENT: Drink je glazen leeg en vermeld ondertussen foutloos de vier Gentse torens: Sint-Baafs, Belfort, Sint-Niklaas en Sint-Michiels!",
+                "VLEERMUIS: Hang ondersteboven met je benen over de schouders van een sterke vrijwilliger en drink zo je pint ad fundum leeg!",
+                "WALIBI / HELIKOPTER: Een sterke vrijwilliger neemt je in brandweergreep op de schouders en draait snel rondjes tot jij je pint ad fundum leeg hebt!",
+                "WATERVAL: Neem twee pinten in één hand. Giet ze zo in elkaar over dat je via het onderste glas beide glazen ad fundum leegdrinkt!",
+                "BLASTOISE: Ga in een cirkel staan met je mede-gestraften, neem een grote slok bier en spuug het tegelijkertijd uit over de persoon tegenover je!",
+                "DE HOBBIT: Speel Bilbo na! Kruip onder corona 1 (Misty Mountains + 1 ad), wandel over corona 2 (Mirkwood + 1 ad) en kruip onder corona 3 voor een ad fundum met Tabasco (Smaug's vuur)!",
+                "GIFBEKER: Neem met je mede-gestraften om de beurt een slok uit dezelfde pint, gorgel, en spuug het terug in het glas. De allerlaatste in de rij moet de pint ad fundum leegdrinken!",
+                "IRMA LA PLACE: Je krijgt één liedje de tijd om zoveel mogelijk kledingstukken uit te doen. Je moet een ad fundum doen voor elk kledingstuk dat je nog aanheeft!",
+                "JAN, PIER, TJORES EN KORNEEL: De gestraften krijgen een naam. Telkens als jouw naam gezongen wordt in 'Al die willen ter kaap'ren varen', moet je een flinke slok drinken!",
+                "KUIKENTJE: De ene gestrafte staat op een verhoog en de andere zit op zijn knieën. De bovenste neemt slokken bier en laat het uit zijn mond in de mond van het 'kuikentje' vallen!",
+                "MOSSEL: Steek je pint stevig tussen je voeten of knieën en drink het glas volledig leeg zonder je handen aan te raken!",
+                "OMGEKEERDE TORNADO: Ga in een cirkel staan en blijf samen non-stop pinten ad fundum drinken tot er nog maar 1 persoon over is die niet heeft overgegeven!",
+                "PAVLOV: Een vrijwilliger krijgt een belletje. Telkens als de vrijwilliger met het belletje rinkelt, moet jij onmiddellijk een ad fundum trekken!",
+                "VELLEKE: Er wordt een stuk papier tussen je billen gestoken en in brand gestoken. Je moet je pint ad fundum leeg hebben voordat het papier mag worden weggehaald!",
+                "WET T-SHIRT CONTEST: Twee gestraften trekken een ad fundum. De winnaar kiest wat er met pint 3 gebeurt: zelf opdrinken, de verliezer laten ad-en, of over de verliezer heen gooien!",
+                "ZEEHOND: Kruip op je buik zonder armen naar je pint op de grond (maak zeehondengeluiden!). Pak het glas met je mond vast en drink het zonder handen leeg!",
+                "ZEVENSPRONG: Drink 7 volle pinten achter elkaar leeg tijdens het zevensprong-lied en -dansje. Lukt het je binnen de 7 minuten zonder overgeven, dan ben je geslaagd!"
+            ];
+                
+            ];
+            
+            // Kies een willekeurige straf uit de lijst
+            const willekeurigeIndex = Math.floor(Math.random() * straffen.length);
+            const gekozenStraf = straffen[willekeurigeIndex];
+            
+            // Toon de straf in een pop-up op het scherm
+            alert("🎲 CANTUS ROULETTE\n\nDe Senior heeft gesproken! Uw straf is:\n\n→ " + gekozenStraf);
+        }
+    </script>
+
 </body>
 </html>
-
