@@ -68,20 +68,28 @@
             margin-bottom: 5px;
             text-decoration: underline;
         }
-        .info-quote {
-            background-color: #f1f8e9;
-            border-left: 4px solid #1e4620;
-            padding: 15px;
-            margin: 20px 0;
-            font-style: italic;
+
+        /* STYLING VOOR DE LINK-BUTTON NAAR DE APARTE PAGINA */
+        .navigation-zone {
+            text-align: center;
+            margin: 25px 0 15px 0;
         }
-        .shield-banner {
-            width: 100%;
-            max-height: 220px;
-            object-fit: cover;
-            border-radius: 6px;
-            margin: 15px 0;
-            border: 1px solid #ddd;
+        .leuven-btn {
+            display: inline-block;
+            background-color: #d4af37; /* Goudgeel */
+            color: #222;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            font-size: 1.05em;
+        }
+        .leuven-btn:hover {
+            background-color: #baa249;
+            color: #000;
+            transform: translateY(-1px);
         }
     </style>
 </head>
@@ -89,12 +97,18 @@
 
     <header>
         <h1>De Leuvense Studentencodex (KVHV)</h1>
-        <!-- Verwijst exact naar de juiste paginanaam -->
         <a href="codex-info.html" class="nav-back">⬅ Terug naar Codex Info</a>
     </header>
 
     <div class="container">
         <p>De Leuvense codex (uitgegeven door het KVHV) bundelt de rijke tradities van kringen en gilden verspreid over heel Vlaanderen. Hieronder vind je het officiële overzicht van alle aangesloten clubs, conventen en verenigingen die in deze groene bijbel zijn opgenomen.</p>
+
+        <!-- DE BUTTON DIE NAAR DE NIEUWE APARTE PAGINA GAAT -->
+        <div class="navigation-zone">
+            <a href="blauwe-paginas.html" class="leuven-btn">
+                📘 Open de Wetten & Voorschriften (Blauwe Pagina's)
+            </a>
+        </div>
 
         <h2>Vlaams-Brabant &amp; Leuven</h2>
 
