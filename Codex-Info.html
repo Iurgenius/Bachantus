@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Codex: Opbouw &amp; Geschiedenis - Bachantus</title>
+    <title>Codex Informatie - Bachantus</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,166 +11,93 @@
             color: #333;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            text-align: center;
         }
         header {
             background-color: #800020;
             color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
-        h1 { margin: 0; }
-        .nav-back {
-            display: inline-block;
-            margin-top: 10px;
-            color: #ffcccb;
-            text-decoration: none;
+            padding: 20px;
         }
         .container {
-            max-width: 850px;
+            max-width: 800px;
             margin: 30px auto;
             padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        h2 {
-            color: #800020;
-            border-bottom: 2px solid #800020;
-            padding-bottom: 5px;
+        .codex-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
             margin-top: 30px;
         }
-        h3 {
-            color: #500014;
-            margin-top: 20px;
-        }
-        .info-card {
-            background: #fafafa;
-            border-left: 4px solid #800020;
+        .codex-card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            width: 45%;
+            min-width: 280px;
             padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 0 4px 4px 0;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .codex-card:hover {
+            transform: scale(1.03);
+        }
+        .codex-card.leuven:hover { border-color: #1e4620; }
+        .codex-card.gent:hover { border-color: #0d47a1; }
+        .codex-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 10px 0;
         }
         .badge {
             display: inline-block;
-            background: #800020;
+            padding: 5px 10px;
             color: white;
-            padding: 3px 8px;
-            font-size: 0.85em;
-            border-radius: 3px;
-            margin-bottom: 5px;
-        }
-
-        /* Styling voor de nieuwe visuele afbeeldingsknoppen */
-        .codex-button-container {
-            display: flex;
-            gap: 20px;
-            margin-top: 25px;
-            flex-wrap: wrap;
-        }
-        .codex-card {
-            flex: 1;
-            min-width: 280px;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            text-decoration: none;
-            color: #333;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-            display: flex;
-            flex-direction: column;
-        }
-        .codex-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 15px rgba(128, 0, 32, 0.15);
-            border-color: #800020;
-        }
-        .codex-card-img {
-            width: 100%;
-            height: 250px;
-            object-fit: contain;
-            background-color: #fff;
-            padding-top: 15px;
-        }
-        .codex-card-body {
-            padding: 15px;
-            text-align: center;
-            background: #fafafa;
-            border-top: 1px solid #eee;
+            border-radius: 4px;
             font-weight: bold;
-            font-size: 1.2em;
-            color: #800020;
+        }
+        .badge.groen { background-color: #1e4620; }
+        .badge.blauw { background-color: #0d47a1; }
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>De Studentencodex Ontrafeld</h1>
-        <a href="index.html" class="nav-back">⬅ Terug naar Startpagina</a>
+        <h1>Kies je Studentencodex</h1>
     </header>
 
     <div class="container">
-        <p>De studentencodex is veel meer dan zomaar een liederenboek; het is de bijbel van het Vlaamse studentenleven. Achter de liederen schuilt een eeuwenoude structuur, traditie en een boeiende evolutie. Op deze pagina duiken we in de opbouw, de verschillende uitgaven en de soorten liederen.</p>
+        <p>Selecteer de codex waarvan je de geschiedenis, de regio's en de aangesloten verenigingen wilt bekijken:</p>
 
-        <h2>De Anatomie &amp; Opbouw van de Codex</h2>
-        <p>Wie een officiële codex (zoals die van het KVHV) openslaat, merkt dat het boek is opgedeeld in zeer specifieke, traditionele delen. De twee belangrijkste hoofddelen zijn:</p>
-        
-        <div class="info-card">
-            <strong>1. Het Clubgedeelte (De 'Blauwe Pagina's')</strong><br>
-            Dit deel bevat de wetten van de cantus. Hier vind je het algemene cantusreglement (de biercodex), de traditionele Latijnse en Nederlandse clubgezangen (zoals het <em>Io Vivat</em> en de <em>Vlaamse Leeuw</em>), de hiërarchie van het praesidium, en de regels rondom dopen en ontgroenen.
-        </div>
-
-        <div class="info-card">
-            <strong>2. Het Liederenboek (De 'Witte Pagina's')</strong><br>
-            Het hart van de codex, gevuld met honderden liederen. Dit deel is strikt gecategoriseerd op basis van herkomst, thema en taal.
-        </div>
-
-        <h2>Welke soorten liederen staan erin?</h2>
-        <p>De variatie aan liederen in de codex is enorm. We kunnen ze grofweg opdelen in een aantal herkenbare genres:</p>
-        <ul>
-            <li><strong>Plechtige Gezangen:</strong> Traditionele openings- en sluitingsliederen (dikwijls in het Latijn of Duits), die met de nodige ernst en rechtopstaand gezongen worden.</li>
-            <li><strong>Gildeliederen &amp; Ambachtsliederen:</strong> Historische liederen die het harde labeur en het leven van middeleeuwse ambachtslieden, ridders of zeelieden bezingen.</li>
-            <li><strong>Studenten- &amp; Drinkliederen:</strong> De echte sfeermakers waarin de liefde voor het studentenleven, de vrijheid en uiteraard het gerstenat centraal staan (bijv. <em>Ergo Bibamus</em>).</li>
-            <li><strong>Prettige &amp; Schunnige Liederen:</strong> Liederen met een serieuze knipoog, vol dubbelzinnige humor, satire of expliciete studentenhumor, vaak bewaard voor de latere, lossere uurtjes van de cantus (de 'corona-vrij').</li>
-            <li><strong>Regionale &amp; Landsbunderliederen:</strong> Liederen die specifieke steden, streken of provincies bezingen, vaak gezongen door studentenclubs die uit die regio afkomstig zijn.</li>
-        </ul>
-
-        <h2>Uitgaven &amp; Grote Wijzigingen</h2>
-        <p>De studentencodex is geen statisch boek; het evolueert mee met de tijd. In Vlaanderen is de groen-witte codex van het <strong>KVHV (Katholiek Vlaams Hoogstudentenverbond)</strong> de absolute standaard, maar die heeft door de decennia heen flinke wijzigingen ondergaan.</p>
-
-        <h3>Oude vs. Nieuwe Uitgaven</h3>
-        <p>De oudere edities (zoals die uit de vorige eeuw) focusten heel sterk op puur historische, Duitse en strikt traditionele liederen. Sinds de grote vernieuwingen in de recentere edities (waaronder de grote herziening in de 21e eeuw) zijn er een aantal opvallende verschuivingen geweest:</p>
-
-        <div class="info-card">
-            <span class="badge">Wijziging</span> <strong>Modernisering &amp; Taalzuivering</strong><br>
-            In de nieuwere uitgaven zijn sommige verouderde, zeer stroeve spellingen aangepast om de liederen zingbaarder te maken voor de moderne student. Ook zijn er her en der vertalingen of extra zangnoten toegevoegd.
-        </div>
-
-        <div class="info-card">
-            <span class="badge">Wijziging</span> <strong>Verdwijnen en verschijnen van liederen</strong><br>
-            Sommige liederen die doorheen de decennia in onbruik waren geraakt, zijn uit de officiële lijst geschrapt om plaats te maken voor modernere Vlaamse klassiekers of liederen die populairder zijn geworden aan de studententoog.
-        </div>
-
-        <!-- DE NIEUWE VISUELE AFBEELDINGSKNOPPEN -->
-        <h2>Specifieke Regionale Edities</h2>
-        <p>Kies een editie hieronder om de specifieke liederen, geschiedenis en unieke eigenschappen per studentenstad te ontdekken:</p>
-        
-        <div class="codex-button-container">
-            <!-- Knop Leuvense Codex -->
-            <a href="codex-leuven.html" class="codex-card">
-                <img src="https://www.academia-studentica.eu/wp-content/uploads/AS/Collection/Songbooks/KVHV-Leuven-Studentencodex-Belgium-Leuven-2014.-scaled.jpg" alt="Leuvense Studentencodex Groen" class="codex-card-img">
-                <div class="codex-card-body">Leuvense Codex</div>
+        <div class="codex-container">
+            <!-- LINK NAAR LEUVEN (Let op: volledig kleine letters!) -->
+            <a href="codex-leuven.html" class="codex-card leuven">
+                <span class="badge groen">KVHV Leuven</span>
+                <div class="codex-title">De Groene Codex</div>
+                <p>Gebruikt in Leuven, Limburg, Antwerpen, Geel, Mechelen en Brussel.</p>
             </a>
 
-            <!-- Knop Gentse Codex -->
-            <a href="codex-gent.html" class="codex-card">
-                <img src="https://www.academia-studentica.eu/wp-content/uploads/AS/Collection/Songbooks/KVHV-Gent-Studentencodex-Belgium-Gent-2007.-scaled.jpg" alt="Gentse Studentencodex Blauw" class="codex-card-img">
-                <div class="codex-card-body">Gentse Codex</div>
+            <!-- LINK NAAR GENT (Let op: volledig kleine letters!) -->
+            <a href="codex-gent.html" class="codex-card gent">
+                <span class="badge blauw">Gentse Seniorenconvent</span>
+                <div class="codex-title">De Blauwe Codex</div>
+                <p>De officiële standaard voor de studentenclubs en kringen in Gent.</p>
             </a>
         </div>
+
+        <a href="index.html" class="back-btn">⬅ Terug naar Startpagina</a>
     </div>
 
 </body>
